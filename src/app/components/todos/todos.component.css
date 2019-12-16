@@ -1,0 +1,10 @@
+.closeIcon {
+    position: absolute; 
+    margin:-7.75rem auto auto 15.5rem;
+    color: rgb(253, 243, 243); 
+    width:1.4rem;
+    height:1.4rem;
+    border-radius: 50%;
+    text-align:center;
+    background: #ee3838;
+}
