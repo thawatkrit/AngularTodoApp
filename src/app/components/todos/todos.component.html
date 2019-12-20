@@ -1,4 +1,4 @@
-    <div  *ngIf="resTodo" style="align-content:center ;position: absolute;">
+    <!-- <div  *ngIf="resTodo" style="align-content:center ;position: absolute;">
     <div *ngFor="let item of resTodo" class="card-body" >
             
         <div class="card" style="width: 16rem;background-color:rgb(220, 220, 220)">
@@ -18,6 +18,24 @@
         </div>
        
     </div>
-    </div>
+    </div> -->
+    <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let movie of movies" cdkDrag [cdkDragStartDelay]="500">
+                <label style="background-color:rgb(220, 220, 220);">
+                        <div class="card-img-top" style="background-color: rgb(73, 72, 72);color: honeydew; height:4rem;">
+                            <div> <fa-icon  class="closeIcon" [icon]="['fas', 'times-circle']" ></fa-icon></div>
+                            <h2><p>{{movie}}</p></h2> 
+                        </div >
+                        <div class="card-text" >
+                        <p>Detail: {{movie}}</p>
+                        </div>
+                        <div class="card-text" >
+                                <p>xx-xx-xxxx</p>
+                                <div> <fa-icon  class="calendarIcon" [icon]="['fas', 'calendar-alt']" ></fa-icon></div>
+                        </div>
+                    </label>
+        </div>
+      </div>
+      
 
 
